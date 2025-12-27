@@ -1,0 +1,1 @@
+import{A as e}from"./variables.js";import{g as r}from"./api.js";import{skeleton as o}from"./skeleton.js";async function l(){try{const t=await r(`${e.BASE_URL}/api/list-hotels?populate[openList][populate][openListSelect]=true&populate[img]=true`);return t&&o(".hotdeals__container",".skeleton__card"),t.data}catch(t){if(t.res&&t.res.status===404)return null}}export{l as g};
